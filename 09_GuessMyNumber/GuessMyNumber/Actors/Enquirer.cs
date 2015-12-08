@@ -23,10 +23,10 @@ namespace GuessMyNumber.Actors
 
             this.selector = selector;
 
-            Receive<Start>(StartGuessing);
-            Receive<TryTooSmall>(HandleTooSmallTry);
-            Receive<TryTooBig>(HandleTooBigTry);
-            Receive<Guessed>(HandleGuessed);
+            Receive<Start>(s => StartGuessing(s));
+            Receive<TryTooSmall>(t => HandleTooSmallTry(t));
+            Receive<TryTooBig>(t => HandleTooBigTry(t));
+            Receive<Guessed>(g => HandleGuessed(g));
         }
 
         protected override void PreStart()

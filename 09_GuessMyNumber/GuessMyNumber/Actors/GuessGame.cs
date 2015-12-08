@@ -23,11 +23,11 @@ namespace GuessMyNumber.Actors
             Context.Watch(chooser);
             Context.Watch(enquirer);
 
-            Receive<Start>(StartGame);
-            Receive<Started>(StartGuessing);
-            Receive<Guessed>(EndGame);
+            Receive<Start>(s => StartGame(s));
+            Receive<Started>(s => StartGuessing(s));
+            Receive<Guessed>(g => EndGame(g));
 
-            Receive<Terminated>(HandleTerminatedActor);
+            Receive<Terminated>(t => HandleTerminatedActor(t));
         }
 
         protected override void PreRestart(Exception reason, object message)

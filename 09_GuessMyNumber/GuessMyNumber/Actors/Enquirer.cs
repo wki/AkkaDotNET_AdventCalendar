@@ -15,8 +15,6 @@ namespace GuessMyNumber.Actors
         private int rangeFrom;
         private int rangeTo;
 
-        private static int crashCounter = 3;
-
         public Enquirer(IActorRef selector)
         {
             Console.WriteLine("Enquirer: Constructor");
@@ -49,9 +47,6 @@ namespace GuessMyNumber.Actors
 
         private void MakeATry()
         {
-            if (--crashCounter == 0)
-                throw new InvalidOperationException("enquirer died");
-
             var triedNumber = rangeFrom + (rangeTo - rangeFrom) / 2;
 
             Console.WriteLine("Enquirer: Range {0} - {1}, trying: {2}", rangeFrom, rangeTo, triedNumber);

@@ -12,8 +12,7 @@ namespace GuessMyNumber.Actors
         public GuessGame()
         {
             chooser = Context.ActorOf(
-                Props.Create<Chooser>()
-                     .WithSupervisorStrategy(new AllForOneStrategy(ex => Directive.Restart)),
+                Props.Create<Chooser>(),
                 "Chooser");
             
             enquirer = Context.ActorOf(
@@ -26,8 +25,6 @@ namespace GuessMyNumber.Actors
             Receive<Start>(s => StartGame(s));
             Receive<Started>(s => StartGuessing(s));
             Receive<Guessed>(g => EndGame(g));
-
-            Receive<Terminated>(t => HandleTerminatedActor(t));
         }
 
         protected override void PreRestart(Exception reason, object message)
@@ -50,11 +47,6 @@ namespace GuessMyNumber.Actors
         private void EndGame(Guessed _)
         {
             Console.WriteLine("Game: Number is guessed, game is over");
-        }
-
-        private void HandleTerminatedActor(Terminated termimated)
-        {
-            Console.WriteLine("Terminated: {0}", termimated.ActorRef.Path.Name);
         }
     }
 }

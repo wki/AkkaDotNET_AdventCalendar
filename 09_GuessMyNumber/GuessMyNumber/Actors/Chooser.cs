@@ -12,15 +12,12 @@ namespace GuessMyNumber.Actors
         private Random generator;
         private int mySecretNumber;
 
-        // will die only the first time.
-        private static bool shouldCrash = true;
-
         public Chooser()
         {
             generator = new Random();
 
-            Receive<Start>(s => ChooseNumber(s));
-            Receive<TestTry>(t => HandleTestTry(t));
+            Receive<Start>(ChooseNumber);
+            Receive<TestTry>(HandleTestTry);
         }
 
         protected override void PostRestart(Exception reason)
@@ -28,8 +25,6 @@ namespace GuessMyNumber.Actors
             Console.WriteLine("Chooser PreRestart");
 
             Self.Tell(new Start());
-
-            shouldCrash = false;
         }
 
         private void ChooseNumber(Start _)
@@ -44,9 +39,6 @@ namespace GuessMyNumber.Actors
 
         private void HandleTestTry(TestTry testTry)
         {
-            if (shouldCrash)
-                throw new InvalidOperationException("chooser died");
-
             var triedNumber = testTry.Number;
 
             Console.WriteLine("Chooser: Received Guess {0}", triedNumber);

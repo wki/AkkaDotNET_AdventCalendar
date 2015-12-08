@@ -18,12 +18,12 @@ namespace AkkaHelloWorld
         #region behaviors
         private void TruthTelling()
         {
-            Receive<string>(TellCorrectTime);
+            Receive<string>(s => TellCorrectTime(s));
         }
 
         private void Lying()
         {
-            Receive<string>(TellAnyTime);
+            Receive<string>(s => TellAnyTime(s));
         }
         #endregion
 

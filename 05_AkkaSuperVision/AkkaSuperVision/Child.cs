@@ -10,7 +10,7 @@ namespace AkkaSuperVision
         public Child ()
         {
             nrMessagesHandled = 0;
-            Receive<string>(HandleStringMessage);
+            Receive<string>(s => HandleStringMessage(s));
         }
 
         protected override void PreStart()

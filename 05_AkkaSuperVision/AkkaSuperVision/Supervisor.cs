@@ -13,7 +13,7 @@ namespace AkkaSuperVision
 
             Context.Watch(child);
 
-            Receive<string>(HandleStringMessage);
+            Receive<string>(s => HandleStringMessage(s));
         }
 
         private void HandleStringMessage(string message)

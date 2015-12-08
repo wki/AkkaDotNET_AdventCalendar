@@ -7,7 +7,7 @@ namespace AkkaHelloWorld
     {
         public HelloReceive()
         {
-            Receive<string>(HandleStringMessage);
+            Receive<string>(s => HandleStringMessage(s));
         }
 
         public void HandleStringMessage(string message)

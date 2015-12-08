@@ -16,8 +16,8 @@ namespace GuessMyNumber.Actors
         {
             generator = new Random();
 
-            Receive<Start>(ChooseNumber);
-            Receive<TestTry>(HandleTestTry);
+            Receive<Start>(s => ChooseNumber(s));
+            Receive<TestTry>(t => HandleTestTry(t));
         }
 
         protected override void PostRestart(Exception reason)

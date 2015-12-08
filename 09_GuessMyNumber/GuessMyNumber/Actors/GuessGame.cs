@@ -19,9 +19,6 @@ namespace GuessMyNumber.Actors
                 Props.Create<Enquirer>(chooser), 
                 "Enquirer");
 
-            Context.Watch(chooser);
-            Context.Watch(enquirer);
-
             Receive<Start>(s => StartGame(s));
             Receive<Started>(s => StartGuessing(s));
             Receive<Guessed>(g => EndGame(g));

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiCalculator", "PiCalculator\PiCalculator.csproj", "{1EACA063-8804-4FB3-819F-1D27CAFDAE7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playground", "Playground\Playground.csproj", "{E39A44C0-F86A-416E-A0C5-77B830D1E16B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiIterative", "PiIterative\PiIterative.csproj", "{E2EF81C9-31D8-4765-B0B9-5566EA60D57C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiSequential", "PiSequential\PiSequential.csproj", "{C5E9727C-94EE-4B29-9696-E756C3CE897A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EACA063-8804-4FB3-819F-1D27CAFDAE7E}.Debug|x86.ActiveCfg = Debug|x86
+		{1EACA063-8804-4FB3-819F-1D27CAFDAE7E}.Debug|x86.Build.0 = Debug|x86
+		{1EACA063-8804-4FB3-819F-1D27CAFDAE7E}.Release|x86.ActiveCfg = Release|x86
+		{1EACA063-8804-4FB3-819F-1D27CAFDAE7E}.Release|x86.Build.0 = Release|x86
+		{C5E9727C-94EE-4B29-9696-E756C3CE897A}.Debug|x86.ActiveCfg = Debug|x86
+		{C5E9727C-94EE-4B29-9696-E756C3CE897A}.Debug|x86.Build.0 = Debug|x86
+		{C5E9727C-94EE-4B29-9696-E756C3CE897A}.Release|x86.ActiveCfg = Release|x86
+		{C5E9727C-94EE-4B29-9696-E756C3CE897A}.Release|x86.Build.0 = Release|x86
+		{E2EF81C9-31D8-4765-B0B9-5566EA60D57C}.Debug|x86.ActiveCfg = Debug|x86
+		{E2EF81C9-31D8-4765-B0B9-5566EA60D57C}.Debug|x86.Build.0 = Debug|x86
+		{E2EF81C9-31D8-4765-B0B9-5566EA60D57C}.Release|x86.ActiveCfg = Release|x86
+		{E2EF81C9-31D8-4765-B0B9-5566EA60D57C}.Release|x86.Build.0 = Release|x86
+		{E39A44C0-F86A-416E-A0C5-77B830D1E16B}.Debug|x86.ActiveCfg = Debug|x86
+		{E39A44C0-F86A-416E-A0C5-77B830D1E16B}.Debug|x86.Build.0 = Debug|x86
+		{E39A44C0-F86A-416E-A0C5-77B830D1E16B}.Release|x86.ActiveCfg = Release|x86
+		{E39A44C0-F86A-416E-A0C5-77B830D1E16B}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal

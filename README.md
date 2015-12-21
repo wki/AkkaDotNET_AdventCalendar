@@ -11,3 +11,5 @@ incrementally filled with code examples from http://wkinkeldei.blogspot.de/
  * 13_WordCount: word count completed (13th Dec.)
  * 15_PiCalculator: various versions for Pi Calulation (15th Dec.)
  * 19_MapReduce: map reduce examples (20th Dec.)
+ * 22_Sudoku_Simple: partially working Sudoku solver (22th Dec.)
+

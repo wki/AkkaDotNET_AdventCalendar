@@ -13,4 +13,5 @@ incrementally filled with code examples from http://wkinkeldei.blogspot.de/
  * 19_MapReduce: map reduce examples (20th Dec.)
  * 22_Sudoku_Simple: partially working Sudoku solver (22th Dec.)
  * 23_Sudoku_Improved: fully working Sudoku solver (23th Dec.)
+ * 24_XMasTree: flushing Xmas Tree (24th Dec.)
 
